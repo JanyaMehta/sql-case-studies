@@ -1,2 +1,64 @@
-# sql-case-studies
-A collection of my solutions for the 8 Week SQL Challenge.
+# My 8 Week SQL Challenge Journey 🚀
+
+Welcome to my repository for the **[8 Week SQL Challenge](https://8weeksqlchallenge.com/)**! 
+This is a collection of my detailed solutions, where I tackle real-world business problems using SQL. Each case study folder contains the full analysis, SQL queries, and results.
+
+## 🛠️ Tech Stack
+
+* **SQL Dialect:** PostgreSQL (You can change this to MySQL, SQL Server, etc.)
+* **Database:** (e.g., Docker, Postico, pgAdmin)
+
+---
+
+## 📂 Case Studies
+
+Here's a summary of my work on each case study, including the key business questions I answered and the SQL skills I applied.
+
+### 🍣 Case Study #1: Danny's Diner
+
+This case study centered around analyzing basic customer data for a restaurant to understand their visiting and spending habits.
+
+[➡️ **View Full Solution & Queries for Case Study #1**](./CaseStudy1_DannysDiner/)
+
+#### What I learned and did:
+
+* Calculated total sales and the amount each customer spent.
+* Determined customer visit frequency and their first and last order dates.
+* Identified the most popular items on the menu.
+* Analyzed customer loyalty patterns by tracking purchases before and after they became members.
+
+#### Key SQL Concepts I Practiced:
+
+* **`JOIN`s** and **`LEFT JOIN`s** to combine data from multiple tables.
+* **Common Table Expressions (`CTE`s)** to structure and simplify complex queries.
+* **Window Functions** like `RANK()`, `DENSE_RANK()`, and `ROW_NUMBER()` to rank customer orders.
+* **Aggregate Functions** such as `SUM()`, `COUNT()`, and `MIN()`/`MAX()`.
+* **Date and Time Functions** to handle order dates.
+
+---
+
+### 🍕 Case Study #2: Pizza Runner (Updated Section)
+
+This case study was a deep dive into pizza delivery logistics, focusing heavily on **data cleaning, transformation, and handling denormalized data structures.**
+
+[➡️ **View Full Solution & Queries for Case Study #2**](./CaseStudy2_PizzaRunner/)
+
+#### What I learned and did:
+
+* Performed intensive data cleaning on `runner_orders` and `customer_orders`, handling `null` values, incorrect data types, and inconsistent text.
+* **Normalized comma-separated values** in the `extras` and `exclusions` columns, transforming them into a usable row-level format for ingredient analysis.
+* Analyzed pizza order volumes and customer modifications.
+* Calculated runner performance metrics, such as delivery times, distance, and average speed.
+* Determined the most successful delivery runners and identified opportunities for business optimization.
+
+#### Key SQL Concepts I Practiced:
+
+* **Data Cleaning:** Using `CASE` statements, `REPLACE()`, `TRIM()`, and `NULLIF()` to standardize messy data.
+* **Data Transformation:** Casting data types (e.g., `CAST(column AS INTEGER)`).
+* **Advanced String & Array Manipulation:** Dealt with denormalized data by splitting comma-separated strings into multiple rows using functions like **`UNNEST()`** (in PostgreSQL) or **`STRING_SPLIT()`** (in SQL Server).
+* **Advanced use of `JOIN`s** to connect the cleaned and transformed tables.
+* All concepts from the first case study (**`CTE`s**, **Window Functions**, **Aggregates**).
+
+---
+
+Feel free to explore the folders for a deeper look at my code and analysis!
