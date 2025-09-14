@@ -8,7 +8,7 @@ This is a collection of my detailed solutions, where I tackle real-world busines
 * **SQL Dialect:** PostgreSQL (You can change this to MySQL, SQL Server, etc.)
 * **Database:** (e.g., Docker, Postico, pgAdmin)
 
----
+
 
 ## 📂 Case Studies
 
