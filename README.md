@@ -5,10 +5,10 @@ This is a collection of my detailed solutions, where I tackle real-world busines
 
 ## 🛠️ Tech Stack
 
-* **SQL Dialect:** PostgreSQL (You can change this to MySQL, SQL Server, etc.)
-* **Database:** (e.g., Docker, Postico, pgAdmin)
+* **SQL Dialect:** PostgreSQL
+* **Database:** Docker & pgAdmin
 
-
+---
 
 ## 📂 Case Studies
 
@@ -37,7 +37,7 @@ This case study centered around analyzing basic customer data for a restaurant t
 
 ---
 
-### 🍕 Case Study #2: Pizza Runner (Updated Section)
+### 🍕 Case Study #2: Pizza Runner
 
 This case study was a deep dive into pizza delivery logistics, focusing heavily on **data cleaning, transformation, and handling denormalized data structures.**
 
@@ -58,6 +58,30 @@ This case study was a deep dive into pizza delivery logistics, focusing heavily 
 * **Advanced String & Array Manipulation:** Dealt with denormalized data by splitting comma-separated strings into multiple rows using functions like **`UNNEST()`** (in PostgreSQL) or **`STRING_SPLIT()`** (in SQL Server).
 * **Advanced use of `JOIN`s** to connect the cleaned and transformed tables.
 * All concepts from the first case study (**`CTE`s**, **Window Functions**, **Aggregates**).
+
+---
+
+### 🛒 Case Study #5: Data Mart
+
+This case study involved creating a clean data mart for weekly sales data and performing a 'before and after' analysis to measure the impact of a packaging change.
+
+[➡️ **View Full Solution & Queries for Case Study #5**](./CaseStudy5_DataMart/)
+
+#### What I learned and did:
+
+* Built a clean, analysis-ready `weekly_sales` data mart by converting data types, extracting date parts, and mapping categorical values.
+* Performed a time-series analysis to measure the sales impact of a sustainable packaging change.
+* Calculated sales metrics for 4-week and 12-week periods before and after the change date.
+* Compared the 2020 results against 2018 and 2019 to account for seasonality and isolate the true impact of the change.
+* Dived deeper into the data to identify which customer segments were most affected and provided strategic business recommendations.
+
+#### Key SQL Concepts I Practiced:
+
+* **Data Mart Creation:** Using `CREATE TABLE AS SELECT` to build a clean, aggregated table for analysis.
+* **Date/Time Functions:** `TO_DATE()` to convert strings and `EXTRACT()` to pull specific date parts (week, month, year).
+* **Conditional Aggregation:** Extensive use of `SUM(CASE WHEN ...)` to create custom time-based buckets for the before-and-after analysis.
+* **Window Functions:** `SUM(...) OVER (PARTITION BY ...)` for calculating percentage-of-total metrics.
+* All core concepts from previous studies (**`CTE`s**, **`JOIN`s**, **Aggregates**).
 
 ---
 
